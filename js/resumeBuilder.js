@@ -29,11 +29,8 @@ var bio = {
 
         $("#header").prepend(formattedRole);
         $("#header").prepend(formattedName);
-        $("#topContacts").append(formattedMobile);
-        $("#topContacts").append(formattedEmail);
-        $("#topContacts").append(formattedTwitter);
-        $("#topContacts").append(formattedGithub);
-        $("#topContacts").append(formattedLocation);
+
+
 
 
         $("#header").append(formattedBiopic);
@@ -46,12 +43,7 @@ var bio = {
             $("#skills").append(formattedSkills);
         }
 
-        $("#footerContacts").append(formattedMobile);
-        $("#footerContacts").append(formattedEmail);
-        $("#footerContacts").append(formattedTwitter);
-        $("#footerContacts").append(formattedGithub);
-        $("#footerContacts").append(formattedLocation);
-
+        $("#topContacts , #footerContacts").append(formattedMobile,formattedEmail,formattedTwitter,formattedGithub,formattedLocation);
     }
 };
 
@@ -116,13 +108,13 @@ var work = {
     jobs: [{
         employer: "Apple",
         title: "Visual Interface Design Intern",
-        location: "USA, ",
+        location: "USA,New York",
         dates: "2011 - 2012",
         description: "Created usable interactions. Designed user flows. Worked on new features with the iTunes Apps Design team. Ideated new interfaces."
     }, {
         employer: "AAA",
         title: "Web Developer",
-        location: "Birmingham",
+        location: "Birmingham, UK",
         dates: "2014 - 2015",
         description: "training in the company as a trainee..."
     }],
@@ -189,4 +181,4 @@ bio.display();
 education.display();
 work.display();
 projects.display();
-
+$("#mapDiv").append(googleMap);
